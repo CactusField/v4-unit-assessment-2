@@ -174,12 +174,12 @@ const classes = [
 */
 
 //CODE HERE
-/*var classhw = false;
-for (i=0; i<classes.length;i++){
-   if (classes[i].inPerson && classes[i].homework === true) {
-       classes.inPerson && classes.homework = false;
-   }
-}*/
+for(i=0;i<classes.length;i++) {
+    for(let j in classes[i]) {
+        if(classes[i][j])
+            classes[i][j] = false;
+    }
+}
   
 ////////////////////PROBLEM 10////////////////////
 /*
@@ -195,7 +195,13 @@ let pairsArray = []
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
-
+for(let i=0;i<lettersToPair.length;i++) {
+    for( j=i+1;j<lettersToPair.length;j++) {
+        if(lettersToPair[i] === lettersToPair[j]) {
+            pairsArray.push([i,j]);
+        }
+    }
+}
     
 
 //////////////////////////////////PROBLEMS 11-14//////////////////////////////////
@@ -246,7 +252,7 @@ function bark(){
 */
 
 //CODE HERE
-  
+ let fidoSpeak = bark.call(fido);
   
 ////////////////////PROBLEM 13////////////////////
 /*
@@ -257,7 +263,10 @@ function bark(){
 */
 
 //CODE HERE
-
+function teachTrick(trick){
+    this.tricks.push(trick);
+    return this.tricks;
+}
 
 /*
     Invoke the bind method on teachTrick, passing in fido as the context and the string 'stay' as a trick.
@@ -265,7 +274,7 @@ function bark(){
 */
 
 //CODE HERE
-  
+  const teachStay = teachTrick.bind(fido, 'stay');
   
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -276,7 +285,9 @@ function bark(){
 */
 
 //CODE HERE
-
+function dogIntro (treat, toy) {
+    return `${this.name} is a ${this.breed} that loves ${treat} and their ${toy}!`;
+}
 
 /*
     Invoke the apply method on dogIntro, passing in fido as the context 
@@ -286,7 +297,7 @@ function bark(){
 
 //CODE HERE
   
-
+const fidoIntro = dogIntro.apply(fido, ['chicken', 'tennis ball']);
 ////////////////////PROBLEM 15////////////////////
 /*
     Write a constructor function called Phone.
@@ -314,11 +325,11 @@ function Phone(brand, model,storage,color, sold){
 */
 
 //CODE HERE
-  // let phone1 = 
+   let phone1 = new Phone('Apple', "pro", 256, 'rose', false)
   
-  // let phone2 = 
+   let phone2 = new Phone('Apple', "max", 900, 'silver', false)
   
-  // let phone3 = 
+   let phone3 = new Phone('Apple', "proplus", 1000, 'black', false)
   
 /*
     Last, add a prototype method to Phone.
@@ -329,5 +340,8 @@ function Phone(brand, model,storage,color, sold){
 */
 
 //CODE HERE
-
+    Phone.prototype.sell = function(){
+        this.sold = true
+        return `${this.brand} ${this.model} has been sold.`;
+    }
   
