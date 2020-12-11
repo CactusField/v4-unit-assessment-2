@@ -21,7 +21,7 @@ let myArr = [4, 'abc', ['cat', 'dog' , 'bird'] , 77];
 const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a']
 
 //CODE HERE
-//let foundZ= nestedLetters
+const foundZ = nestedLetters[5][2][1];
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -129,7 +129,11 @@ compareNums = (num1, num2) =>{
 */
 
 //CODE HERE
-
+for (i in shapes){
+    if(shapes[i] % 2===1){
+        delete shapes[i];
+    }
+}
 ////////////////////PROBLEM 9////////////////////
 
 //DO NOT EDIT CODE BELOW
