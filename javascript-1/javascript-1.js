@@ -244,7 +244,7 @@ let fido = new Dog('Fido' , 3 , 'Jack Russell' , ['sit' , 'shake'] )
 //CODE HERE
 function bark(){
     return this.name + ' says bark!'
-}
+};
 
 /*
     Invoke the call method on bark, passing in fido as the context
@@ -266,7 +266,7 @@ function bark(){
 function teachTrick(trick){
     this.tricks.push(trick);
     return this.tricks;
-}
+};
 
 /*
     Invoke the bind method on teachTrick, passing in fido as the context and the string 'stay' as a trick.
@@ -311,7 +311,7 @@ function Phone(brand, model,storage,color, sold){
     this.model= model;
     this.storage=storage;
     this.sold= sold;
-}
+};
   
 /*
     Next make three new phones using your constructor function.
@@ -343,5 +343,5 @@ function Phone(brand, model,storage,color, sold){
     Phone.prototype.sell = function(){
         this.sold = true
         return `${this.brand} ${this.model} has been sold.`;
-    }
+    };
   

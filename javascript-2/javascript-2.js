@@ -36,7 +36,7 @@ let foods = [
 */
 
 //CODE HERE
-foods.forEach((food)=> {food.calories = food.carbs*4 + food.protein*4 + food.fat*9});
+foods.forEach((food) => {food.calories = food.carbs * 4 + food.protein * 4 + food.fat * 9});
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
   For problems 2-4, you will be working with the products array below.
@@ -81,8 +81,8 @@ const products = [
 */
 
 //CODE HERE
-const saleProducts = products.map((product)=>{
-  product.price*= .75;
+const saleProducts = products.map((product) =>{
+  product.price *= .75;
   return product})
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -93,7 +93,7 @@ const saleProducts = products.map((product)=>{
 */
 
 //CODE HERE
-const blueProducts = saleProducts.filter((product)=>product.color.includes('blue'));
+const blueProducts = saleProducts.filter((product) =>product.color.includes('blue'));
 ////////////////////PROBLEM 4////////////////////
 /*
   Now you'd like to get them their order total. 

@@ -12,23 +12,96 @@ the font is called 'nunito' and can be found on google fonts
 ***you can use it if you'd like or you can choose your own***
 
 */
-#headlogo{
-    color:rgb(53, 5, 226);
-    height: 40px;
-    width:100%;
+*{
+    font-family:sans-serif;
 }
 
-.profimg{
-    width:160px;
-    height:160px;
+
+body {
+    background-color: rgb(0, 0, 0);
 }
 
-.maintext-box{
 
+.bold{
+    font-weight:bold;
 }
-.headlinks{
-    display:flex;
-    flex-direction:row;
-    justify-content: flex-end;
-    align-content:space-around;
+
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(42, 171, 226);
+    padding: 0 0 0 75px;
+    box-sizing: content-box;
+}
+
+
+header2 {
+    width: 2%;
+    margin: auto;
+    display: flex;
+    justify-content: right;
+    color: white;
+    letter-spacing: 2px;
+}
+
+
+footer {
+    width: 85%;
+    height: 50px;
+    background-color:rgb(0, 179, 255);
+    margin: 0 0 0 75px;
+    padding: 20px 0;
+}
+
+
+.h1{
+    padding-left:20px;
+}
+
+
+.content {
+    width: 85%;
+    background-color: white;
+    margin: 0 0 0 75px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+
+
+.box{
+    width: 55%;
+    display: block;
+    margin:  auto;
+    padding: 10px 200px 0 10px;
+    font-size: 16px;
+}
+
+
+
+.wrap{
+    width: 75%;
+    height: 300px;
+    display: inline-block;
+}
+
+
+.img {
+    width: 25%;
+    height: 25%;
+    display: bottom;
+    justify-content: left;
+    padding: 20px 20px;
+}
+
+
+.icon {
+ position: absolute;
+}
+
+.question{
+    display: flex;
+    align-content: right;
 }
